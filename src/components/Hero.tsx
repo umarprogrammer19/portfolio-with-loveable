@@ -25,17 +25,17 @@ const Hero = () => {
               <p className="text-lg text-muted-foreground font-medium">
                 Hello, I'm
               </p>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground">
-                John <span className="bg-hero-gradient bg-clip-text text-transparent">Developer</span>
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+                Hafiz Muhammad <span className="bg-hero-gradient bg-clip-text text-transparent">Umar Farooq</span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-muted-foreground font-light">
-                Full Stack Developer & UI/UX Enthusiast
+                Senior Full Stack Developer & Technical Architect
               </h2>
             </div>
 
-            <p className="text-lg text-muted-foreground max-w-lg">
-              I craft digital experiences with clean code and beautiful design. 
-              Passionate about creating solutions that make a difference.
+            <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+              Transforming business ideas into scalable digital solutions with 8+ years of expertise in 
+              full-stack development, cloud architecture, and team leadership.
             </p>
 
             {/* CTA Buttons */}

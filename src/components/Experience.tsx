@@ -3,51 +3,90 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const Experience = () => {
-  const experiences = [
+const experiences = [
+    {
+      title: 'Technical Architect & Senior Consultant',
+      company: 'Tech Solutions Global',
+      location: 'Remote (Global)',
+      period: '2023 - Present',
+      type: 'Full-time',
+      description: 'Leading technical architecture decisions for enterprise-level applications, managing distributed teams, and driving digital transformation initiatives across multiple industry verticals.',
+      responsibilities: [
+        'Architected and led implementation of microservices platform serving 500K+ users',
+        'Established development standards and best practices across 3 development teams',
+        'Designed cloud-native solutions reducing infrastructure costs by 40%',
+        'Mentored 15+ developers and conducted technical workshops',
+        'Led digital transformation projects for Fortune 500 clients'
+      ],
+      technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'AWS', 'Docker', 'Kubernetes', 'PostgreSQL', 'Redis'],
+      achievements: [
+        'Reduced deployment time from 2 hours to 15 minutes',
+        'Improved application performance by 65%',
+        'Successfully delivered 12 enterprise projects on time'
+      ]
+    },
     {
       title: 'Senior Full Stack Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
+      company: 'InnovateTech Solutions',
+      location: 'Lahore, Pakistan',
+      period: '2021 - 2023',
       type: 'Full-time',
-      description: 'Lead development of cloud-native applications serving 100K+ users. Architect scalable microservices and mentor junior developers.',
+      description: 'Spearheaded development of scalable web applications and mobile solutions. Led cross-functional teams and established robust development workflows.',
       responsibilities: [
-        'Led a team of 5 developers in rebuilding the core platform using React and Node.js',
-        'Implemented CI/CD pipelines reducing deployment time by 60%',
-        'Collaborated with product team to define technical requirements and roadmap',
-        'Mentored junior developers and conducted code reviews'
+        'Led full-stack development of 8 major client projects with React and Node.js',
+        'Implemented automated testing reducing bug reports by 50%',
+        'Designed and developed RESTful APIs handling 100K+ daily requests',
+        'Collaborated with UX/UI teams to deliver exceptional user experiences',
+        'Established code review processes and development guidelines'
       ],
-      technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'PostgreSQL', 'Docker', 'Kubernetes']
+      technologies: ['React', 'Node.js', 'Python', 'Django', 'PostgreSQL', 'MongoDB', 'AWS', 'Docker'],
+      achievements: [
+        'Delivered projects 20% ahead of schedule',
+        'Achieved 99.9% uptime for critical applications',
+        'Led team that won "Best Technical Innovation" award'
+      ]
     },
     {
       title: 'Full Stack Developer',
-      company: 'StartupXYZ',
-      location: 'New York, NY',
-      period: '2020 - 2022',
+      company: 'DigitalCraft Agency',
+      location: 'Karachi, Pakistan',
+      period: '2019 - 2021',
       type: 'Full-time',
-      description: 'Built MVP from ground up, scaling to 10K users. Developed both frontend and backend systems with focus on performance and user experience.',
+      description: 'Developed comprehensive web solutions for diverse clients ranging from startups to established enterprises. Specialized in modern JavaScript frameworks and database optimization.',
       responsibilities: [
-        'Developed responsive web application using React and Express.js',
-        'Designed and implemented RESTful APIs and database schemas',
-        'Integrated third-party services including payment gateways and analytics',
-        'Optimized application performance achieving 95+ Lighthouse scores'
+        'Built 25+ responsive web applications using React and Vue.js',
+        'Optimized database queries improving response times by 60%',
+        'Integrated payment gateways and third-party APIs for e-commerce solutions',
+        'Collaborated with design teams to implement pixel-perfect interfaces',
+        'Provided technical consultation to clients on technology stack decisions'
       ],
-      technologies: ['React', 'Express.js', 'JavaScript', 'MongoDB', 'Stripe API', 'Heroku']
+      technologies: ['React', 'Vue.js', 'Node.js', 'Express.js', 'MySQL', 'MongoDB', 'Stripe API', 'Firebase'],
+      achievements: [
+        'Maintained 98% client satisfaction rate',
+        'Successfully launched 25+ projects',
+        'Reduced development time by 30% through reusable components'
+      ]
     },
     {
-      title: 'Frontend Developer',
-      company: 'Digital Agency Pro',
-      location: 'Remote',
-      period: '2019 - 2020',
-      type: 'Contract',
-      description: 'Created engaging web experiences for diverse clients. Specialized in modern JavaScript frameworks and responsive design.',
+      title: 'Junior Web Developer',
+      company: 'StartupHub Technologies',
+      location: 'Lahore, Pakistan',
+      period: '2017 - 2019',
+      type: 'Full-time',
+      description: 'Started professional journey focusing on frontend development and gradually expanded to full-stack capabilities. Contributed to multiple startup projects and learned modern development practices.',
       responsibilities: [
-        'Built 15+ responsive websites for various industries',
-        'Collaborated with designers to implement pixel-perfect UIs',
-        'Optimized websites for SEO and accessibility standards',
-        'Maintained and updated existing client projects'
+        'Developed responsive frontend interfaces using HTML5, CSS3, and JavaScript',
+        'Assisted in backend development with PHP and MySQL',
+        'Participated in agile development processes and daily standups',
+        'Collaborated with senior developers on code optimization',
+        'Maintained and updated existing client websites'
       ],
-      technologies: ['Vue.js', 'HTML5', 'CSS3', 'SASS', 'Webpack', 'Git']
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL', 'jQuery', 'Bootstrap', 'Git'],
+      achievements: [
+        'Completed training program with 95% score',
+        'Contributed to 10+ successful project deliveries',
+        'Received "Rising Star Developer" recognition'
+      ]
     }
   ];
 
@@ -100,23 +139,40 @@ const Experience = () => {
                       </div>
                     </CardHeader>
 
-                    <CardContent className="space-y-4">
-                      <p className="text-muted-foreground">{exp.description}</p>
+                    <CardContent className="space-y-6">
+                      <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
                       
                       <div>
-                        <h4 className="font-semibold text-foreground mb-2">Key Responsibilities:</h4>
-                        <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Key Responsibilities:</h4>
+                        <ul className="space-y-2">
                           {exp.responsibilities.map((resp, idx) => (
-                            <li key={idx}>{resp}</li>
+                            <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground">
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></div>
+                              <span>{resp}</span>
+                            </li>
                           ))}
                         </ul>
                       </div>
 
+                      {exp.achievements && (
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-3 text-lg">Key Achievements:</h4>
+                          <ul className="space-y-2">
+                            {exp.achievements.map((achievement, idx) => (
+                              <li key={idx} className="flex items-start gap-3 text-sm text-accent">
+                                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></div>
+                                <span>{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
                       <div>
-                        <h4 className="font-semibold text-foreground mb-3">Technologies Used:</h4>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Technologies Used:</h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech, idx) => (
-                            <Badge key={idx} variant="outline" className="text-xs">
+                            <Badge key={idx} variant="outline" className="text-xs font-medium">
                               {tech}
                             </Badge>
                           ))}

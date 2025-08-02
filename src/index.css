@@ -4,49 +4,51 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* Professional Portfolio Design System */
+/* Premium Professional Design System */
 @layer base {
   :root {
-    /* Light mode - Professional Blue Theme */
-    --background: 220 20% 98%;
-    --foreground: 224 15% 15%;
+    /* Light mode - Executive Professional Theme */
+    --background: 220 15% 97%;
+    --foreground: 215 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 15% 15%;
+    --card-foreground: 215 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 15% 15%;
+    --popover-foreground: 215 25% 12%;
 
-    --primary: 217 78% 51%;
+    --primary: 215 88% 34%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 78% 65%;
+    --primary-glow: 215 75% 45%;
 
-    --secondary: 220 15% 95%;
-    --secondary-foreground: 224 15% 25%;
+    --secondary: 220 12% 92%;
+    --secondary-foreground: 215 20% 20%;
 
-    --muted: 220 15% 95%;
-    --muted-foreground: 224 10% 55%;
+    --muted: 220 12% 92%;
+    --muted-foreground: 215 15% 50%;
 
-    --accent: 262 73% 60%;
+    --accent: 27 85% 55%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 262 73% 75%;
+    --accent-glow: 27 85% 65%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 78% 51%;
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 215 88% 34%;
 
-    --radius: 0.75rem;
+    --radius: 0.625rem;
 
-    /* Portfolio-specific tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(217 78% 51%) 0%, hsl(262 73% 60%) 100%);
-    --card-gradient: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 15% 98%) 100%);
-    --skill-gradient: linear-gradient(90deg, hsl(217 78% 51%) 0%, hsl(217 78% 65%) 100%);
-    --shadow-elegant: 0 10px 30px -10px hsl(217 78% 51% / 0.2);
-    --shadow-glow: 0 0 40px hsl(217 78% 51% / 0.15);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Premium Portfolio-specific tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(215 88% 34%) 0%, hsl(215 75% 45%) 50%, hsl(27 85% 55%) 100%);
+    --card-gradient: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 12% 98%) 100%);
+    --skill-gradient: linear-gradient(90deg, hsl(215 88% 34%) 0%, hsl(215 75% 45%) 100%);
+    --accent-gradient: linear-gradient(135deg, hsl(27 85% 55%) 0%, hsl(27 85% 65%) 100%);
+    --shadow-elegant: 0 15px 40px -15px hsl(215 88% 34% / 0.25);
+    --shadow-glow: 0 0 50px hsl(215 88% 34% / 0.2);
+    --shadow-premium: 0 25px 60px -25px hsl(215 88% 34% / 0.3);
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
 
@@ -66,43 +68,45 @@
   }
 
   .dark {
-    /* Dark mode - Sophisticated Dark Theme */
-    --background: 224 15% 6%;
+    /* Dark mode - Premium Executive Theme */
+    --background: 215 25% 5%;
     --foreground: 220 15% 95%;
 
-    --card: 224 15% 8%;
+    --card: 215 25% 7%;
     --card-foreground: 220 15% 95%;
 
-    --popover: 224 15% 8%;
+    --popover: 215 25% 7%;
     --popover-foreground: 220 15% 95%;
 
-    --primary: 217 78% 65%;
-    --primary-foreground: 224 15% 6%;
-    --primary-glow: 217 78% 75%;
+    --primary: 215 75% 55%;
+    --primary-foreground: 215 25% 5%;
+    --primary-glow: 215 75% 65%;
 
-    --secondary: 224 15% 12%;
+    --secondary: 215 20% 12%;
     --secondary-foreground: 220 15% 85%;
 
-    --muted: 224 15% 12%;
-    --muted-foreground: 224 10% 65%;
+    --muted: 215 20% 12%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 262 73% 70%;
-    --accent-foreground: 224 15% 6%;
-    --accent-glow: 262 73% 80%;
+    --accent: 27 85% 65%;
+    --accent-foreground: 215 25% 5%;
+    --accent-glow: 27 85% 75%;
 
     --destructive: 0 84% 70%;
-    --destructive-foreground: 224 15% 6%;
+    --destructive-foreground: 215 25% 5%;
 
-    --border: 224 15% 15%;
-    --input: 224 15% 15%;
-    --ring: 217 78% 65%;
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 215 75% 55%;
 
-    /* Dark mode portfolio tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(217 78% 65%) 0%, hsl(262 73% 70%) 100%);
-    --card-gradient: linear-gradient(145deg, hsl(224 15% 8%) 0%, hsl(224 15% 10%) 100%);
-    --skill-gradient: linear-gradient(90deg, hsl(217 78% 65%) 0%, hsl(217 78% 75%) 100%);
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 40px hsl(217 78% 65% / 0.3);
+    /* Dark mode premium portfolio tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(215 75% 55%) 0%, hsl(215 75% 65%) 50%, hsl(27 85% 65%) 100%);
+    --card-gradient: linear-gradient(145deg, hsl(215 25% 7%) 0%, hsl(215 20% 10%) 100%);
+    --skill-gradient: linear-gradient(90deg, hsl(215 75% 55%) 0%, hsl(215 75% 65%) 100%);
+    --accent-gradient: linear-gradient(135deg, hsl(27 85% 65%) 0%, hsl(27 85% 75%) 100%);
+    --shadow-elegant: 0 15px 40px -15px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 50px hsl(215 75% 55% / 0.4);
+    --shadow-premium: 0 25px 60px -25px hsl(0 0% 0% / 0.8);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -129,29 +133,47 @@
 }
 
 @layer components {
-  /* Portfolio button variants */
+  /* Premium Portfolio button variants */
   .btn-hero {
-    @apply bg-primary hover:bg-primary-glow text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    @apply text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-500 hover:scale-105;
     background: var(--hero-gradient);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .btn-hero:hover {
+    box-shadow: var(--shadow-premium);
   }
 
   .btn-secondary {
-    @apply bg-secondary hover:bg-muted text-secondary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105;
+    @apply bg-secondary hover:bg-muted text-secondary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 border border-border hover:border-primary/20;
+  }
+
+  .btn-accent {
+    @apply text-accent-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105;
+    background: var(--accent-gradient);
+    box-shadow: var(--shadow-elegant);
   }
 
   .btn-ghost {
-    @apply text-foreground hover:bg-secondary px-4 py-2 rounded-lg transition-all duration-300;
+    @apply text-foreground hover:bg-secondary px-4 py-2 rounded-lg transition-all duration-300 hover:text-primary;
   }
 
-  /* Card styles */
+  /* Premium Card styles */
   .portfolio-card {
-    @apply bg-card rounded-xl p-6 transition-all duration-300 hover:scale-105;
+    @apply bg-card rounded-xl p-8 transition-all duration-500 hover:scale-105 border border-border/50;
     background: var(--card-gradient);
     box-shadow: var(--shadow-elegant);
   }
 
   .portfolio-card:hover {
-    box-shadow: var(--shadow-glow);
+    box-shadow: var(--shadow-premium);
+    border-color: hsl(var(--primary) / 0.2);
+  }
+
+  .premium-card {
+    @apply bg-card rounded-2xl p-10 transition-all duration-500 hover:scale-102 border border-border/30;
+    background: var(--card-gradient);
+    box-shadow: var(--shadow-premium);
   }
 
   /* Skill progress bars */
